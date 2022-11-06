@@ -35,7 +35,6 @@ adiciona();
 'O valor da variável agora é 7'
 */
 
-
 /*
 Crie uma função com as seguintes características:
 1. A função deve receber 3 argumentos;
@@ -43,19 +42,23 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function preencher(a, b, c){
+    if(a && b && c !== undefined){
+       return (a * b * c) + 2 ;
+    }else return 'Preencha todos os valores'
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+preencher(1,2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+//'Preencha todos os valores'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+preencher(1,2,3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 8
 
 /*
 Crie uma função com as seguintes características:
@@ -66,8 +69,41 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function retorna (a,b,c){
+    if (a !== undefined && b,c === undefined){
+        return a;
+    }else if ( a !== undefined && b !== undefined && c === undefined){
+        return a + b;
+    }else if (a,b,c !== undefined){
+        return (a + b) / c;
+    }else if (a,b,c === undefined){
+        return false;
+    }else{
+        return null;
+    }
+}
+
+
+function threeArgs(x, y, z){
+    if(x !== undefined && y === undefined && z === undefined){
+        return x;
+    }else if(x !== undefined && y !== undefined && z === undefined){
+        return x + y;
+    }else if(x !== undefined && y !== undefined && z !== undefined){
+        return ( x + y ) / z;
+    }else if(x === undefined && y === undefined && z === undefined){
+        return false;
+    }else{
+        return null;
+    }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+ threeArgs(); // false
+
+threeArgs(1); // 1
+
+threeArgs(1,2) //3
+
+threeArgs(1,2,3) // 1
 ```
