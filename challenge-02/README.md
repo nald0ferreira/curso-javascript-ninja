@@ -74,13 +74,23 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function newValores(x, y, z){
-    if(y && z === undefined){
+    if(x !== undefined && y === undefined && z === undefined){
         return x;
-    }else if(z === undefined){
+    }else if(x , y !== undefined && z === undefined){
         return x + y;
+    }else if(x,y,z !== undefined){
+        return ( x + y ) / z;
+    }else if(x, y, z === undefined){
+        return false;
+    }else{
+        return null;
     }
-}
+}newValores
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+newValores();       //false
+newValores(2);      // 2
+newValores(2,4);    //6
+newValores(2,3,5);  //1
+newValores(13,5,6,33);
 ```
